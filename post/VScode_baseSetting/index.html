@@ -1,22 +1,119 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://StupidYR.github.io</id>
-    <title>StupidYR</title>
-    <updated>2021-01-23T07:37:09.245Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://StupidYR.github.io"/>
-    <link rel="self" href="https://StupidYR.github.io/atom.xml"/>
-    <subtitle>If I had not seen the sun</subtitle>
-    <logo>https://StupidYR.github.io/images/avatar.png</logo>
-    <icon>https://StupidYR.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, StupidYR</rights>
-    <entry>
-        <title type="html"><![CDATA[VScode基本配置]]></title>
-        <id>https://StupidYR.github.io/post/VScode_baseSetting/</id>
-        <link href="https://StupidYR.github.io/post/VScode_baseSetting/">
-        </link>
-        <updated>2021-01-23T05:37:13.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="vscode基本配置">VScode基本配置</h1>
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>StupidYR</title>
+<meta name="description" content="If I had not seen the sun" />
+<link rel="shortcut icon" href="https://StupidYR.github.io/favicon.ico?v=1611387396640">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://StupidYR.github.io/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://StupidYR.github.io">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://StupidYR.github.io/images/avatar.png?v=1611387396640" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">StupidYR</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li><a href="#vscode%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE">VScode基本配置</a>
+<ul>
+<li><a href="#1-%E4%B8%BB%E9%A2%98">1. 主题</a>
+<ul>
+<li><a href="#11-%E9%A2%9C%E8%89%B2%E4%B8%BB%E9%A2%98">1.1 颜色主题</a></li>
+<li><a href="#12-%E6%96%87%E4%BB%B6%E5%9B%BE%E6%A0%87%E4%B8%BB%E9%A2%98">1.2 文件图标主题</a></li>
+</ul>
+</li>
+<li><a href="#2-%E4%B8%8Ematlab">2. 与Matlab</a>
+<ul>
+<li><a href="#21-%E6%89%A9%E5%B1%95%E5%AE%89%E8%A3%85">2.1 扩展安装</a></li>
+<li><a href="#22-%E4%BF%AE%E6%94%B9settingjson">2.2 修改setting.json</a></li>
+<li><a href="#23-%E8%84%9A%E6%9C%AC%E8%BF%90%E8%A1%8C">2.3 脚本运行</a>
+<ul>
+<li><a href="#231-code-runner">2.3.1 Code Runner</a></li>
+<li><a href="#232-%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91">2.3.2 代码编辑</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83%E8%A7%86%E9%A2%91">参考视频</a></li>
+<li><a href="#%E5%86%99%E5%9C%A8%E5%90%8E%E9%9D%A2%E7%9A%84%E8%AF%9D">写在后面的话</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%A8%E5%AE%B6%E7%A6%8F">全家福</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/StupidYR/StupidYR.github.io" target="_blank">StupidYR</a></div>
+    <a class="rss" href="https://StupidYR.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">VScode基本配置</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2021-01-23 / 3 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://StupidYR.github.io/post-images/VScode_baseSetting.jpg" alt="">
+        
+        <div class="post-content yue">
+          <h1 id="vscode基本配置">VScode基本配置</h1>
 <h2 id="1-主题">1. 主题</h2>
 <h3 id="11-颜色主题">1.1 颜色主题</h3>
 <p>配置路径：左下角齿轮 ---&gt; 颜色主题</p>
@@ -88,68 +185,133 @@
 </li>
 </ol>
 </section>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Markdown]]></title>
-        <id>https://StupidYR.github.io/post/markdown/</id>
-        <link href="https://StupidYR.github.io/post/markdown/">
-        </link>
-        <updated>2020-11-29T12:47:19.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="什么是-markdown">😵什么是 Markdown</h2>
-<p>Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，<strong>粗体</strong> 或者 <em>斜体</em> 某些文字，更棒的是，它还可以</p>
-<h3 id="1制作一份待办事宜-todo-列表">1.制作一份待办事宜 Todo 列表📃</h3>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6609268"><label class="task-list-item-label" for="task-item-6609268"> 支持以 PDF 格式导出文稿</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9895723"><label class="task-list-item-label" for="task-item-9895723"> 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7182788"><label class="task-list-item-label" for="task-item-7182788"> 新增 Todo 列表功能</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7360532"><label class="task-list-item-label" for="task-item-7360532"> 修复 LaTex 公式渲染问题</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1389848"><label class="task-list-item-label" for="task-item-1389848"> 新增 LaTex 公式编号功能</label></li>
-</ul>
-<h3 id="2-书写一个质能守恒公式latex️">2. 书写一个质能守恒公式[^LaTeX]✍️</h3>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E=mc^2
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8641079999999999em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mord"><span class="mord mathdefault">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></p>
-<h3 id="3高亮一段代码code-️">3.高亮一段代码[^code] ✒️</h3>
-<pre><code class="language-python">@requires_authorization
-class SomeClass:
-    pass
 
-if __name__ == '__main__':
-    # A comment
-    print 'hello world'
-</code></pre>
-<h3 id="4-绘制表格">4. 绘制表格📊</h3>
-<table>
-<thead>
-<tr>
-<th>项目</th>
-<th style="text-align:right">价格</th>
-<th style="text-align:center">数量</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>计算机</td>
-<td style="text-align:right">$1600</td>
-<td style="text-align:center">5</td>
-</tr>
-<tr>
-<td>手机</td>
-<td style="text-align:right">$12</td>
-<td style="text-align:center">12</td>
-</tr>
-<tr>
-<td>管线</td>
-<td style="text-align:right">$1</td>
-<td style="text-align:center">234</td>
-</tr>
-</tbody>
-</table>
-<h3 id="5-更详细语法说明">5. 更详细语法说明🔎</h3>
-<p>想要查看更详细的语法说明，可以参考我们准备的 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown">Cmd Markdown 简明语法手册</a>，进阶用户可以参考 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#cmd-markdown-%E9%AB%98%E9%98%B6%E8%AF%AD%E6%B3%95%E6%89%8B%E5%86%8C">Cmd Markdown 高阶语法手册</a> 了解更多高级功能。</p>
-<p>总而言之，不同于其它 <em>所见即所得</em> 的编辑器：你只需使用键盘专注于书写文本内容，就可以生成印刷级的排版格式，省却在键盘和工具栏之间来回切换，调整内容和格式的麻烦。<strong>Markdown 在流畅的书写和印刷级的阅读体验之间找到了平衡。</strong> 目前它已经成为世界上最大的技术分享网站 GitHub 和 技术问答网站 StackOverFlow 的御用书写格式。</p>
-<p><code>注</code>：以上内容来自<a href="https://www.zybuluo.com/mdeditor">Cmd Mardown</a></p>
-<hr>
-]]></content>
-    </entry>
-</feed>
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://StupidYR.github.io/tag/PGh8_WnXE/">
+            <span class="flex-auto">VScode</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://StupidYR.github.io/post/markdown/">
+                <h3 class="post-title">
+                  Markdown
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+
+    <script src="https://StupidYR.github.io/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>
