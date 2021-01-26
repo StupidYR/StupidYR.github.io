@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://StupidYR.github.io</id>
     <title>StupidYR</title>
-    <updated>2021-01-23T07:37:09.245Z</updated>
+    <updated>2021-01-26T08:54:29.417Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://StupidYR.github.io"/>
     <link rel="self" href="https://StupidYR.github.io/atom.xml"/>
@@ -59,7 +59,7 @@
     &quot;files.encoding&quot;: &quot;gb2312&quot;
     },
 
-    //Matlab运行配置(code runner插件的设置),如不采用1.3.1的方法则可删去
+    //Matlab运行配置(code runner插件的设置),如不采用2.3.1的方法则可删去
     &quot;code-runner.executorMap&quot;: {
     &quot;matlab&quot;: &quot;cd $dir &amp;&amp; matlab -nosplash -nodesktop -r $fileNameWithoutExt&quot;
     }
@@ -100,11 +100,11 @@
 <p>Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，<strong>粗体</strong> 或者 <em>斜体</em> 某些文字，更棒的是，它还可以</p>
 <h3 id="1制作一份待办事宜-todo-列表">1.制作一份待办事宜 Todo 列表📃</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6609268"><label class="task-list-item-label" for="task-item-6609268"> 支持以 PDF 格式导出文稿</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9895723"><label class="task-list-item-label" for="task-item-9895723"> 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7182788"><label class="task-list-item-label" for="task-item-7182788"> 新增 Todo 列表功能</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7360532"><label class="task-list-item-label" for="task-item-7360532"> 修复 LaTex 公式渲染问题</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1389848"><label class="task-list-item-label" for="task-item-1389848"> 新增 LaTex 公式编号功能</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3193650"><label class="task-list-item-label" for="task-item-3193650"> 支持以 PDF 格式导出文稿</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2599523"><label class="task-list-item-label" for="task-item-2599523"> 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-39360"><label class="task-list-item-label" for="task-item-39360"> 新增 Todo 列表功能</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4335756"><label class="task-list-item-label" for="task-item-4335756"> 修复 LaTex 公式渲染问题</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2644393"><label class="task-list-item-label" for="task-item-2644393"> 新增 LaTex 公式编号功能</label></li>
 </ul>
 <h3 id="2-书写一个质能守恒公式latex️">2. 书写一个质能守恒公式[^LaTeX]✍️</h3>
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E=mc^2
