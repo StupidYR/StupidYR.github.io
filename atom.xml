@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://StupidYR.github.io</id>
     <title>StupidYR</title>
-    <updated>2021-03-23T14:08:28.729Z</updated>
+    <updated>2021-05-07T13:30:49.188Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://StupidYR.github.io"/>
     <link rel="self" href="https://StupidYR.github.io/atom.xml"/>
@@ -10,6 +10,63 @@
     <logo>https://StupidYR.github.io/images/avatar.png</logo>
     <icon>https://StupidYR.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, StupidYR</rights>
+    <entry>
+        <title type="html"><![CDATA[Matlab小时钟]]></title>
+        <id>https://StupidYR.github.io/post/Matlab_Clock/</id>
+        <link href="https://StupidYR.github.io/post/Matlab_Clock/">
+        </link>
+        <updated>2021-05-07T13:23:28.000Z</updated>
+        <content type="html"><![CDATA[<pre><code class="language-Matlab">
+t = linspace(-4,4,100);
+x = cos(t);
+y = sin(t);
+plot(x,y,'k','LineWidth',2)                   % 参数方程绘制出时钟外框
+axis equal;                                   % 使时钟外框呈现出来是个正圆
+hold on 
+miaoX = [0,0];
+miaoY = [0,1];
+fenX = [0,0];
+fenY = [0,0.7];
+shiX = [0,0];
+shiY = [0,0.4];                               % 分别控制秒分时的指针长度为 1，0.7，0.4
+text(0,1,'0');
+text(1,0,'3');
+text(0,-1,'6');
+text(-1,0,'9');                               % 四个时间刻度
+miaoH = plot(miaoX,miaoY,'r','LineWidth',1);
+fenH = plot(fenX,fenY,'g','LineWidth',3);
+shiH = plot(shiX,shiY,'b','LineWidth',5);     % 参数方程绘制时分秒指针，控制粗细
+
+miaoT = pi/2;
+fenT = pi/2;
+shiT = pi/2;                                  % 确定初始位置
+
+for b = 1:60
+    for a = 1:60
+        miaoT = miaoT - 2*pi/60;
+        miaoX(2) = cos(miaoT);      
+        miaoY(2) = sin(miaoT);                      
+        set(miaoH,'XData',miaoX,'YData',miaoY)      % 使秒针开始移动
+        pause on
+        pause(1)
+        pause off                                   % 一秒钟动一个刻度
+        drawnow;                                    
+    end
+    fenT = fenT - 2*pi/60;
+    fenX(2) = 0.7*cos(fenT);
+    fenY(2) = 0.7*sin(fenT);
+    set(fenH,'XData',fenX,'YData',fenY)
+    drawnow;                                        % 秒针旋转一圈使分针移动一个刻度
+
+    shiT = shiT - pi/(6*60);
+    shiX(2) = 0.4* cos(shiT);
+    shiY(2) = 0.4*sin(shiT);
+    set(shiH,'XData',shiX,'YData',shiY)
+    drawnow;                                        % 分针旋转一圈使时针移动一个刻度
+end
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[爱乐之城]]></title>
         <id>https://StupidYR.github.io/post/LaLaLand/</id>
@@ -130,11 +187,11 @@ It's Over / Engagement Party<sup class="footnote-ref"><a href="#fn2" id="fnref2"
 <p>Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，<strong>粗体</strong> 或者 <em>斜体</em> 某些文字，更棒的是，它还可以</p>
 <h3 id="1制作一份待办事宜-todo-列表">1.制作一份待办事宜 Todo 列表📃</h3>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2402614"><label class="task-list-item-label" for="task-item-2402614"> 支持以 PDF 格式导出文稿</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7552947"><label class="task-list-item-label" for="task-item-7552947"> 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9779469"><label class="task-list-item-label" for="task-item-9779469"> 新增 Todo 列表功能</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2342731"><label class="task-list-item-label" for="task-item-2342731"> 修复 LaTex 公式渲染问题</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4848601"><label class="task-list-item-label" for="task-item-4848601"> 新增 LaTex 公式编号功能</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8449687"><label class="task-list-item-label" for="task-item-8449687"> 支持以 PDF 格式导出文稿</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8535419"><label class="task-list-item-label" for="task-item-8535419"> 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5472213"><label class="task-list-item-label" for="task-item-5472213"> 新增 Todo 列表功能</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3886753"><label class="task-list-item-label" for="task-item-3886753"> 修复 LaTex 公式渲染问题</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3425587"><label class="task-list-item-label" for="task-item-3425587"> 新增 LaTex 公式编号功能</label></li>
 </ul>
 <h3 id="2-书写一个质能守恒公式latex️">2. 书写一个质能守恒公式[^LaTeX]✍️</h3>
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E=mc^2
